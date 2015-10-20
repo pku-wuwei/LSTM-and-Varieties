@@ -1,0 +1,1238 @@
+E:\学习\Python\Python2.7\python.exe D:/Python/lstm_theano/LSTM/lstm_shin_01.py
+Using gpu device 0: GeForce GTX 860M
+model options {'encoder': 'lstm', 'optimizer': <function adadelta at 0x00000000198EDC88>, 'validFreq': 370, 'lrate': 0.0001, 'batch_size': 16, 'decay_c': 0.0, 'patience': 10, 'reload_model': None, 'n_words': 10000, 'max_epochs': 100, 'dispFreq': 10, 'dataset': 'imdb', 'valid_batch_size': 64, 'use_dropout': True, 'dim_proj': 128, 'maxlen': 100, 'saveto': 'lstm_model.npz', 'noise_std': 0.0, 'test_size': 500, 'saveFreq': 1110}
+Loading data
+Building model
+E:\学习\Python\Python2.7\lib\site-packages\theano-0.7.0-py2.7.egg\theano\scan_module\scan_perform_ext.py:133: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility
+  from scan_perform.scan_perform import *
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpebfmj7/9b19f8e9f1c4dc3a749baa18448473af.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpebfmj7/9b19f8e9f1c4dc3a749baa18448473af.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9os_c4/3f958efd3f132402d77e9eee18b9cceb.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9os_c4/3f958efd3f132402d77e9eee18b9cceb.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp7nftfb/a7014ccdeb99079a05fe5f45d4b13e27.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp7nftfb/a7014ccdeb99079a05fe5f45d4b13e27.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpm9sxy6/55b4967141085d90055025ec6fe21756.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpm9sxy6/55b4967141085d90055025ec6fe21756.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp0bmtf7/3feba355cf01f66ef4f4544821ca3e11.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp0bmtf7/3feba355cf01f66ef4f4544821ca3e11.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpvmxswr/f5965b1c12b3482b04a6c28b0109583c.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpvmxswr/f5965b1c12b3482b04a6c28b0109583c.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9ovdmu/d261799949acd84695f0b06dd6ef4b2d.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9ovdmu/d261799949acd84695f0b06dd6ef4b2d.exp
+
+DEBUG: nvcc STDOUT mod.cu
+   正在创建库 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpksrs9l/4ebf662301c6a17ea639b08668fdb427.lib 和对象 C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpksrs9l/4ebf662301c6a17ea639b08668fdb427.exp
+
+Optimization
+1998 train examples
+105 valid examples
+500 test examples
+Epoch  0 Update  10 Cost  0.688298404217
+Epoch  0 Update  20 Cost  0.707619488239
+Epoch  0 Update  30 Cost  0.687694072723
+Epoch  0 Update  40 Cost  0.687959074974
+Epoch  0 Update  50 Cost  0.677483379841
+Epoch  0 Update  60 Cost  0.685539662838
+Epoch  0 Update  70 Cost  0.710488915443
+Epoch  0 Update  80 Cost  0.697942256927
+Epoch  0 Update  90 Cost  0.702208459377
+Epoch  0 Update  100 Cost  0.669039011002
+Epoch  0 Update  110 Cost  0.67034226656
+Epoch  0 Update  120 Cost  0.640480339527
+Seen 1998 samples
+Epoch  1 Update  130 Cost  0.705089449883
+Epoch  1 Update  140 Cost  0.667032361031
+Epoch  1 Update  150 Cost  0.689105570316
+Epoch  1 Update  160 Cost  0.641576647758
+Epoch  1 Update  170 Cost  0.595986008644
+Epoch  1 Update  180 Cost  0.623610675335
+Epoch  1 Update  190 Cost  0.641740918159
+Epoch  1 Update  200 Cost  0.625415623188
+Epoch  1 Update  210 Cost  0.610111832619
+Epoch  1 Update  220 Cost  0.715970575809
+Epoch  1 Update  230 Cost  0.636343359947
+Epoch  1 Update  240 Cost  0.686535835266
+Epoch  1 Update  250 Cost  0.70274657011
+Seen 1998 samples
+Epoch  2 Update  260 Cost  0.669647097588
+Epoch  2 Update  270 Cost  0.660729110241
+Epoch  2 Update  280 Cost  0.67236250639
+Epoch  2 Update  290 Cost  0.636029005051
+Epoch  2 Update  300 Cost  0.640067338943
+Epoch  2 Update  310 Cost  0.747026324272
+Epoch  2 Update  320 Cost  0.629206359386
+Epoch  2 Update  330 Cost  0.714218974113
+Epoch  2 Update  340 Cost  0.661572337151
+Epoch  2 Update  350 Cost  0.667969405651
+Epoch  2 Update  360 Cost  0.704735517502
+Epoch  2 Update  370 Cost  0.707369983196
+('Train ', 0.42192192192192191, 'Valid ', 0.43809523809523809, 'Test ', 0.52200000000000002)
+Seen 1998 samples
+Epoch  3 Update  380 Cost  0.642761051655
+Epoch  3 Update  390 Cost  0.644321858883
+Epoch  3 Update  400 Cost  0.679715871811
+Epoch  3 Update  410 Cost  0.647277534008
+Epoch  3 Update  420 Cost  0.702633500099
+Epoch  3 Update  430 Cost  0.721243262291
+Epoch  3 Update  440 Cost  0.736204922199
+Epoch  3 Update  450 Cost  0.68524813652
+Epoch  3 Update  460 Cost  0.666549146175
+Epoch  3 Update  470 Cost  0.717782735825
+Epoch  3 Update  480 Cost  0.686361551285
+Epoch  3 Update  490 Cost  0.587041139603
+Epoch  3 Update  500 Cost  0.630087077618
+Seen 1998 samples
+Epoch  4 Update  510 Cost  0.75038176775
+Epoch  4 Update  520 Cost  0.630812048912
+Epoch  4 Update  530 Cost  0.668668687344
+Epoch  4 Update  540 Cost  0.650279998779
+Epoch  4 Update  550 Cost  0.626999020576
+Epoch  4 Update  560 Cost  0.667617499828
+Epoch  4 Update  570 Cost  0.663468182087
+Epoch  4 Update  580 Cost  0.726874530315
+Epoch  4 Update  590 Cost  0.727632880211
+Epoch  4 Update  600 Cost  0.663822591305
+Epoch  4 Update  610 Cost  0.667026698589
+Epoch  4 Update  620 Cost  0.637189686298
+Seen 1998 samples
+Epoch  5 Update  630 Cost  0.752217173576
+Epoch  5 Update  640 Cost  0.706727087498
+Epoch  5 Update  650 Cost  0.636518716812
+Epoch  5 Update  660 Cost  0.685180664062
+Epoch  5 Update  670 Cost  0.65221196413
+Epoch  5 Update  680 Cost  0.720650672913
+Epoch  5 Update  690 Cost  0.700072526932
+Epoch  5 Update  700 Cost  0.751787602901
+Epoch  5 Update  710 Cost  0.647236824036
+Epoch  5 Update  720 Cost  0.663897097111
+Epoch  5 Update  730 Cost  0.711170911789
+Epoch  5 Update  740 Cost  0.689216971397
+('Train ', 0.42192192192192191, 'Valid ', 0.43809523809523809, 'Test ', 0.52200000000000002)
+Epoch  5 Update  750 Cost  0.616028726101
+Seen 1998 samples
+Epoch  6 Update  760 Cost  0.700894832611
+Epoch  6 Update  770 Cost  0.671201109886
+Epoch  6 Update  780 Cost  0.682881057262
+Epoch  6 Update  790 Cost  0.708598017693
+Epoch  6 Update  800 Cost  0.669204413891
+Epoch  6 Update  810 Cost  0.68016910553
+Epoch  6 Update  820 Cost  0.629881381989
+Epoch  6 Update  830 Cost  0.688802957535
+Epoch  6 Update  840 Cost  0.667836308479
+Epoch  6 Update  850 Cost  0.6652597785
+Epoch  6 Update  860 Cost  0.638507962227
+Epoch  6 Update  870 Cost  0.739285588264
+Seen 1998 samples
+Epoch  7 Update  880 Cost  0.685585439205
+Epoch  7 Update  890 Cost  0.681275784969
+Epoch  7 Update  900 Cost  0.718133270741
+Epoch  7 Update  910 Cost  0.658101499081
+Epoch  7 Update  920 Cost  0.676251530647
+Epoch  7 Update  930 Cost  0.637145996094
+Epoch  7 Update  940 Cost  0.606615304947
+Epoch  7 Update  950 Cost  0.788151979446
+Epoch  7 Update  960 Cost  0.654486238956
+Epoch  7 Update  970 Cost  0.74421864748
+Epoch  7 Update  980 Cost  0.719744563103
+Epoch  7 Update  990 Cost  0.667197227478
+Epoch  7 Update  1000 Cost  0.655531048775
+Seen 1998 samples
+Epoch  8 Update  1010 Cost  0.679532408714
+Epoch  8 Update  1020 Cost  0.663930118084
+Epoch  8 Update  1030 Cost  0.671992838383
+Epoch  8 Update  1040 Cost  0.611380875111
+Epoch  8 Update  1050 Cost  0.654878497124
+Epoch  8 Update  1060 Cost  0.625198423862
+Epoch  8 Update  1070 Cost  0.68504267931
+Epoch  8 Update  1080 Cost  0.620478689671
+Epoch  8 Update  1090 Cost  0.672634065151
+Epoch  8 Update  1100 Cost  0.664147019386
+Epoch  8 Update  1110 Cost  0.571366667747
+Saving... Done
+('Train ', 0.35185185185185186, 'Valid ', 0.40952380952380951, 'Test ', 0.48199999999999998)
+Epoch  8 Update  1120 Cost  0.797908425331
+Seen 1998 samples
+Epoch  9 Update  1130 Cost  0.413988173008
+Epoch  9 Update  1140 Cost  0.481902450323
+Epoch  9 Update  1150 Cost  0.572540998459
+Epoch  9 Update  1160 Cost  0.645650088787
+Epoch  9 Update  1170 Cost  0.62500333786
+Epoch  9 Update  1180 Cost  0.585918724537
+Epoch  9 Update  1190 Cost  0.495466083288
+Epoch  9 Update  1200 Cost  0.603223502636
+Epoch  9 Update  1210 Cost  0.611803174019
+Epoch  9 Update  1220 Cost  0.613880217075
+Epoch  9 Update  1230 Cost  0.578450083733
+Epoch  9 Update  1240 Cost  0.478286117315
+Epoch  9 Update  1250 Cost  1.11926937103
+Seen 1998 samples
+Epoch  10 Update  1260 Cost  0.425880491734
+Epoch  10 Update  1270 Cost  0.5065497756
+Epoch  10 Update  1280 Cost  0.78991818428
+Epoch  10 Update  1290 Cost  0.683000683784
+Epoch  10 Update  1300 Cost  0.504649102688
+Epoch  10 Update  1310 Cost  0.5361135602
+Epoch  10 Update  1320 Cost  0.537282526493
+Epoch  10 Update  1330 Cost  0.630988657475
+Epoch  10 Update  1340 Cost  0.433896571398
+Epoch  10 Update  1350 Cost  0.364616274834
+Epoch  10 Update  1360 Cost  0.499942839146
+Epoch  10 Update  1370 Cost  0.653947472572
+Seen 1998 samples
+Epoch  11 Update  1380 Cost  0.55811136961
+Epoch  11 Update  1390 Cost  0.421299159527
+Epoch  11 Update  1400 Cost  0.330377519131
+Epoch  11 Update  1410 Cost  0.385015130043
+Epoch  11 Update  1420 Cost  0.36166754365
+Epoch  11 Update  1430 Cost  0.456522226334
+Epoch  11 Update  1440 Cost  0.492507487535
+Epoch  11 Update  1450 Cost  0.398598015308
+Epoch  11 Update  1460 Cost  0.303358733654
+Epoch  11 Update  1470 Cost  0.199866190553
+Epoch  11 Update  1480 Cost  0.795975327492
+('Train ', 0.31181181181181183, 'Valid ', 0.29523809523809519, 'Test ', 0.42400000000000004)
+Epoch  11 Update  1490 Cost  0.599416673183
+Epoch  11 Update  1500 Cost  0.320843845606
+Seen 1998 samples
+Epoch  12 Update  1510 Cost  0.321263790131
+Epoch  12 Update  1520 Cost  0.18885011971
+Epoch  12 Update  1530 Cost  0.676609635353
+Epoch  12 Update  1540 Cost  0.25139144063
+Epoch  12 Update  1550 Cost  0.383014470339
+Epoch  12 Update  1560 Cost  0.456359833479
+Epoch  12 Update  1570 Cost  0.149562850595
+Epoch  12 Update  1580 Cost  0.14259545505
+Epoch  12 Update  1590 Cost  0.349750906229
+Epoch  12 Update  1600 Cost  0.192654073238
+Epoch  12 Update  1610 Cost  0.399681776762
+Epoch  12 Update  1620 Cost  0.301848113537
+Seen 1998 samples
+Epoch  13 Update  1630 Cost  0.551567554474
+Epoch  13 Update  1640 Cost  0.400829702616
+Epoch  13 Update  1650 Cost  0.109602019191
+Epoch  13 Update  1660 Cost  0.311762154102
+Epoch  13 Update  1670 Cost  0.258388400078
+Epoch  13 Update  1680 Cost  0.307443380356
+Epoch  13 Update  1690 Cost  0.082811832428
+Epoch  13 Update  1700 Cost  0.417339146137
+Epoch  13 Update  1710 Cost  1.35231208801
+Epoch  13 Update  1720 Cost  0.350563675165
+Epoch  13 Update  1730 Cost  0.468860358
+Epoch  13 Update  1740 Cost  0.0638425275683
+Epoch  13 Update  1750 Cost  0.31868109107
+Seen 1998 samples
+Epoch  14 Update  1760 Cost  0.060992937535
+Epoch  14 Update  1770 Cost  0.123834460974
+Epoch  14 Update  1780 Cost  0.450697690248
+Epoch  14 Update  1790 Cost  0.345975667238
+Epoch  14 Update  1800 Cost  0.102282688022
+Epoch  14 Update  1810 Cost  0.294186681509
+Epoch  14 Update  1820 Cost  0.0943182706833
+Epoch  14 Update  1830 Cost  0.70440363884
+Epoch  14 Update  1840 Cost  0.116208553314
+Epoch  14 Update  1850 Cost  0.220334991813
+('Train ', 0.038038038038038069, 'Valid ', 0.19999999999999996, 'Test ', 0.23399999999999999)
+Epoch  14 Update  1860 Cost  0.0687366724014
+Epoch  14 Update  1870 Cost  0.359905391932
+Seen 1998 samples
+Epoch  15 Update  1880 Cost  0.218096584082
+Epoch  15 Update  1890 Cost  0.0669779404998
+Epoch  15 Update  1900 Cost  0.54194945097
+Epoch  15 Update  1910 Cost  0.0380895733833
+Epoch  15 Update  1920 Cost  0.246696665883
+Epoch  15 Update  1930 Cost  0.0917778909206
+Epoch  15 Update  1940 Cost  0.135663196445
+Epoch  15 Update  1950 Cost  0.0992479175329
+Epoch  15 Update  1960 Cost  0.165166154504
+Epoch  15 Update  1970 Cost  0.0561152361333
+Epoch  15 Update  1980 Cost  0.0285369604826
+Epoch  15 Update  1990 Cost  0.0481085069478
+Epoch  15 Update  2000 Cost  0.0999212190509
+Seen 1998 samples
+Epoch  16 Update  2010 Cost  0.168877288699
+Epoch  16 Update  2020 Cost  0.068709731102
+Epoch  16 Update  2030 Cost  0.0617789626122
+Epoch  16 Update  2040 Cost  0.0660608485341
+Epoch  16 Update  2050 Cost  0.0550378113985
+Epoch  16 Update  2060 Cost  0.145442709327
+Epoch  16 Update  2070 Cost  0.0230857785791
+Epoch  16 Update  2080 Cost  0.143130719662
+Epoch  16 Update  2090 Cost  0.0186245460063
+Epoch  16 Update  2100 Cost  0.06669947505
+Epoch  16 Update  2110 Cost  0.00789778679609
+Epoch  16 Update  2120 Cost  0.170032352209
+Seen 1998 samples
+Epoch  17 Update  2130 Cost  0.0309043433517
+Epoch  17 Update  2140 Cost  0.0677293390036
+Epoch  17 Update  2150 Cost  0.397817730904
+Epoch  17 Update  2160 Cost  0.0758521705866
+Epoch  17 Update  2170 Cost  0.0399430990219
+Epoch  17 Update  2180 Cost  0.00286477385089
+Epoch  17 Update  2190 Cost  0.0627198070288
+Epoch  17 Update  2200 Cost  0.158949270844
+Epoch  17 Update  2210 Cost  0.0359739847481
+Epoch  17 Update  2220 Cost  0.0558950416744
+Saving... Done
+('Train ', 0.0085085085085084833, 'Valid ', 0.15238095238095239, 'Test ', 0.19199999999999995)
+Epoch  17 Update  2230 Cost  0.860002636909
+Epoch  17 Update  2240 Cost  0.0318841636181
+Epoch  17 Update  2250 Cost  0.0151415318251
+Seen 1998 samples
+Epoch  18 Update  2260 Cost  0.0208561457694
+Epoch  18 Update  2270 Cost  0.00235680164769
+Epoch  18 Update  2280 Cost  0.0248923245817
+Epoch  18 Update  2290 Cost  0.0175400972366
+Epoch  18 Update  2300 Cost  0.000865881098434
+Epoch  18 Update  2310 Cost  0.0151001363993
+Epoch  18 Update  2320 Cost  0.00624000001699
+Epoch  18 Update  2330 Cost  0.0752642378211
+Epoch  18 Update  2340 Cost  0.0728478804231
+Epoch  18 Update  2350 Cost  0.0132581703365
+Epoch  18 Update  2360 Cost  0.00523536559194
+Epoch  18 Update  2370 Cost  0.165933325887
+Seen 1998 samples
+Epoch  19 Update  2380 Cost  0.010639468208
+Epoch  19 Update  2390 Cost  0.00889952387661
+Epoch  19 Update  2400 Cost  0.00520241400227
+Epoch  19 Update  2410 Cost  0.0839593932033
+Epoch  19 Update  2420 Cost  0.00666012335569
+Epoch  19 Update  2430 Cost  0.0074213379994
+Epoch  19 Update  2440 Cost  0.025438092649
+Epoch  19 Update  2450 Cost  0.0270985253155
+Epoch  19 Update  2460 Cost  0.0126698231325
+Epoch  19 Update  2470 Cost  0.00903019029647
+Epoch  19 Update  2480 Cost  0.0326903238893
+Epoch  19 Update  2490 Cost  0.0208868272603
+Epoch  19 Update  2500 Cost  0.0246393997222
+Seen 1998 samples
+Epoch  20 Update  2510 Cost  0.0020810207352
+Epoch  20 Update  2520 Cost  0.0291487500072
+Epoch  20 Update  2530 Cost  0.0367903895676
+Epoch  20 Update  2540 Cost  0.115804381669
+Epoch  20 Update  2550 Cost  0.0071123894304
+Epoch  20 Update  2560 Cost  0.116269163787
+Epoch  20 Update  2570 Cost  0.681784749031
+Epoch  20 Update  2580 Cost  0.132193475962
+Epoch  20 Update  2590 Cost  0.00941267795861
+('Train ', 0.010510510510510551, 'Valid ', 0.1428571428571429, 'Test ', 0.25)
+Epoch  20 Update  2600 Cost  0.0266877822578
+Epoch  20 Update  2610 Cost  0.0138552905992
+Epoch  20 Update  2620 Cost  0.0347421690822
+Seen 1998 samples
+Epoch  21 Update  2630 Cost  0.00558747118339
+Epoch  21 Update  2640 Cost  0.00131832645275
+Epoch  21 Update  2650 Cost  0.00327988085337
+Epoch  21 Update  2660 Cost  0.0082494309172
+Epoch  21 Update  2670 Cost  0.514179706573
+Epoch  21 Update  2680 Cost  0.0313972942531
+Epoch  21 Update  2690 Cost  0.00577198248357
+Epoch  21 Update  2700 Cost  0.00711059989408
+Epoch  21 Update  2710 Cost  0.0339400880039
+Epoch  21 Update  2720 Cost  0.0763278082013
+Epoch  21 Update  2730 Cost  0.0251394435763
+Epoch  21 Update  2740 Cost  0.0244932156056
+Epoch  21 Update  2750 Cost  0.0613090768456
+Seen 1998 samples
+Epoch  22 Update  2760 Cost  0.00488770287484
+Epoch  22 Update  2770 Cost  0.00970017071813
+Epoch  22 Update  2780 Cost  0.00496410764754
+Epoch  22 Update  2790 Cost  0.000186053381185
+Epoch  22 Update  2800 Cost  0.00195394642651
+Epoch  22 Update  2810 Cost  0.0102055808529
+Epoch  22 Update  2820 Cost  0.00586233381182
+Epoch  22 Update  2830 Cost  0.000709725485649
+Epoch  22 Update  2840 Cost  0.00126236001961
+Epoch  22 Update  2850 Cost  0.00242926878855
+Epoch  22 Update  2860 Cost  0.00133411993738
+Epoch  22 Update  2870 Cost  0.206075236201
+Seen 1998 samples
+Epoch  23 Update  2880 Cost  0.0047395140864
+Epoch  23 Update  2890 Cost  0.00119143736083
+Epoch  23 Update  2900 Cost  0.00198284373619
+Epoch  23 Update  2910 Cost  0.00241853739135
+Epoch  23 Update  2920 Cost  0.0144819607958
+Epoch  23 Update  2930 Cost  0.0032041692175
+Epoch  23 Update  2940 Cost  0.00162289547734
+Epoch  23 Update  2950 Cost  0.0101067079231
+Epoch  23 Update  2960 Cost  0.0196680966765
+('Train ', 0.0015015015015015232, 'Valid ', 0.15238095238095239, 'Test ', 0.21799999999999997)
+Epoch  23 Update  2970 Cost  0.00743608362973
+Epoch  23 Update  2980 Cost  0.0194281991571
+Epoch  23 Update  2990 Cost  0.121192276478
+Epoch  23 Update  3000 Cost  0.0219339374453
+Seen 1998 samples
+Epoch  24 Update  3010 Cost  0.052130702883
+Epoch  24 Update  3020 Cost  0.00378212472424
+Epoch  24 Update  3030 Cost  0.0332868918777
+Epoch  24 Update  3040 Cost  0.00378017732874
+Epoch  24 Update  3050 Cost  0.00599450431764
+Epoch  24 Update  3060 Cost  0.00203632260673
+Epoch  24 Update  3070 Cost  0.00400108052418
+Epoch  24 Update  3080 Cost  0.00174119509757
+Epoch  24 Update  3090 Cost  0.00566023122519
+Epoch  24 Update  3100 Cost  0.000707180413883
+Epoch  24 Update  3110 Cost  0.0487084425986
+Epoch  24 Update  3120 Cost  0.0049336142838
+Seen 1998 samples
+Epoch  25 Update  3130 Cost  0.00848062243313
+Epoch  25 Update  3140 Cost  0.0129921855405
+Epoch  25 Update  3150 Cost  0.00738340103999
+Epoch  25 Update  3160 Cost  0.00214155670255
+Epoch  25 Update  3170 Cost  0.000947592023294
+Epoch  25 Update  3180 Cost  0.148592799902
+Epoch  25 Update  3190 Cost  0.0115514174104
+Epoch  25 Update  3200 Cost  0.00596308521926
+Epoch  25 Update  3210 Cost  0.00357928359881
+Epoch  25 Update  3220 Cost  0.00943764578551
+Epoch  25 Update  3230 Cost  0.0265095215291
+Epoch  25 Update  3240 Cost  0.0066524585709
+Epoch  25 Update  3250 Cost  0.00861391425133
+Seen 1998 samples
+Epoch  26 Update  3260 Cost  0.000443689554231
+Epoch  26 Update  3270 Cost  0.00896575581282
+Epoch  26 Update  3280 Cost  6.88322834321e-05
+Epoch  26 Update  3290 Cost  0.000910180271603
+Epoch  26 Update  3300 Cost  0.00218211440369
+Epoch  26 Update  3310 Cost  0.00516035594046
+Epoch  26 Update  3320 Cost  0.00068518781336
+Epoch  26 Update  3330 Cost  0.00170690531377
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.20599999999999996)
+Epoch  26 Update  3340 Cost  0.000543389469385
+Epoch  26 Update  3350 Cost  0.00211585056968
+Epoch  26 Update  3360 Cost  0.00222340389155
+Epoch  26 Update  3370 Cost  0.00472316797823
+Seen 1998 samples
+Epoch  27 Update  3380 Cost  0.00966298859566
+Epoch  27 Update  3390 Cost  0.00495234830305
+Epoch  27 Update  3400 Cost  0.0020511217881
+Epoch  27 Update  3410 Cost  0.000900383747648
+Epoch  27 Update  3420 Cost  0.00136388465762
+Epoch  27 Update  3430 Cost  0.00100056058727
+Epoch  27 Update  3440 Cost  0.0174260232598
+Epoch  27 Update  3450 Cost  0.00157825893257
+Epoch  27 Update  3460 Cost  0.00098422775045
+Epoch  27 Update  3470 Cost  0.0706946775317
+Epoch  27 Update  3480 Cost  0.0113218929619
+Epoch  27 Update  3490 Cost  0.0118244439363
+Epoch  27 Update  3500 Cost  0.00240250793286
+Seen 1998 samples
+Epoch  28 Update  3510 Cost  0.00208130688407
+Epoch  28 Update  3520 Cost  0.000715047703125
+Epoch  28 Update  3530 Cost  0.000240758861764
+Epoch  28 Update  3540 Cost  0.00365748838522
+Epoch  28 Update  3550 Cost  0.00121233577374
+Epoch  28 Update  3560 Cost  0.000727954378817
+Epoch  28 Update  3570 Cost  0.00396042363718
+Epoch  28 Update  3580 Cost  0.000183295778697
+Epoch  28 Update  3590 Cost  0.023095741868
+Epoch  28 Update  3600 Cost  0.0116794332862
+Epoch  28 Update  3610 Cost  0.00141189980786
+Epoch  28 Update  3620 Cost  0.00100291834679
+Seen 1998 samples
+Epoch  29 Update  3630 Cost  0.0154939396307
+Epoch  29 Update  3640 Cost  0.0126594929025
+Epoch  29 Update  3650 Cost  0.00342937372625
+Epoch  29 Update  3660 Cost  0.000874148099683
+Epoch  29 Update  3670 Cost  0.000445544166723
+Epoch  29 Update  3680 Cost  0.00175916275475
+Epoch  29 Update  3690 Cost  0.00734962383285
+Epoch  29 Update  3700 Cost  0.000742099538911
+('Train ', 0.0, 'Valid ', 0.12380952380952381, 'Test ', 0.20399999999999996)
+Epoch  29 Update  3710 Cost  9.97602037387e-05
+Epoch  29 Update  3720 Cost  4.01730831072e-05
+Epoch  29 Update  3730 Cost  0.000443768192781
+Epoch  29 Update  3740 Cost  0.000105484985397
+Epoch  29 Update  3750 Cost  0.000103292361018
+Seen 1998 samples
+Epoch  30 Update  3760 Cost  0.0295557044446
+Epoch  30 Update  3770 Cost  0.000856558443047
+Epoch  30 Update  3780 Cost  0.000309593044221
+Epoch  30 Update  3790 Cost  0.00039611622924
+Epoch  30 Update  3800 Cost  0.0263012591749
+Epoch  30 Update  3810 Cost  0.0052797915414
+Epoch  30 Update  3820 Cost  0.00432027457282
+Epoch  30 Update  3830 Cost  0.099182754755
+Epoch  30 Update  3840 Cost  0.00195835460909
+Epoch  30 Update  3850 Cost  0.000162984579219
+Epoch  30 Update  3860 Cost  0.00765705853701
+Epoch  30 Update  3870 Cost  0.000188651465578
+Seen 1998 samples
+Epoch  31 Update  3880 Cost  0.000779588939622
+Epoch  31 Update  3890 Cost  6.42683444312e-05
+Epoch  31 Update  3900 Cost  0.000382204045309
+Epoch  31 Update  3910 Cost  0.0179210714996
+Epoch  31 Update  3920 Cost  0.0218229293823
+Epoch  31 Update  3930 Cost  0.622664630413
+Epoch  31 Update  3940 Cost  0.00835044402629
+Epoch  31 Update  3950 Cost  0.00126715830993
+Epoch  31 Update  3960 Cost  0.00709422398359
+Epoch  31 Update  3970 Cost  0.00669300649315
+Epoch  31 Update  3980 Cost  0.00245048524812
+Epoch  31 Update  3990 Cost  0.000275596044958
+Epoch  31 Update  4000 Cost  0.000134127156343
+Seen 1998 samples
+Epoch  32 Update  4010 Cost  0.00150427874178
+Epoch  32 Update  4020 Cost  0.000110850502097
+Epoch  32 Update  4030 Cost  5.14521780133e-05
+Epoch  32 Update  4040 Cost  0.000268024567049
+Epoch  32 Update  4050 Cost  0.00022484222427
+Epoch  32 Update  4060 Cost  0.00162732985336
+Epoch  32 Update  4070 Cost  0.00155508785974
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.18000000000000005)
+Epoch  32 Update  4080 Cost  0.00150178314652
+Epoch  32 Update  4090 Cost  0.00854006502777
+Epoch  32 Update  4100 Cost  0.00104240817018
+Epoch  32 Update  4110 Cost  0.00555379316211
+Epoch  32 Update  4120 Cost  0.000301918276818
+Seen 1998 samples
+Epoch  33 Update  4130 Cost  0.00135976646561
+Epoch  33 Update  4140 Cost  0.00012191470887
+Epoch  33 Update  4150 Cost  0.00307947979309
+Epoch  33 Update  4160 Cost  0.000350730697392
+Epoch  33 Update  4170 Cost  0.000143021548865
+Epoch  33 Update  4180 Cost  0.00383629486896
+Epoch  33 Update  4190 Cost  0.0208211559802
+Epoch  33 Update  4200 Cost  0.00628379778937
+Epoch  33 Update  4210 Cost  0.0486010462046
+Epoch  33 Update  4220 Cost  0.0122496709228
+Epoch  33 Update  4230 Cost  0.000313425436616
+Epoch  33 Update  4240 Cost  0.000722874538042
+Epoch  33 Update  4250 Cost  0.00155894574709
+Seen 1998 samples
+Epoch  34 Update  4260 Cost  0.000589947798289
+Epoch  34 Update  4270 Cost  0.00030120727024
+Epoch  34 Update  4280 Cost  0.000134507674375
+Epoch  34 Update  4290 Cost  4.79779628222e-05
+Epoch  34 Update  4300 Cost  0.0010363451438
+Epoch  34 Update  4310 Cost  0.00244304328226
+Epoch  34 Update  4320 Cost  0.000212812054087
+Epoch  34 Update  4330 Cost  0.0134554905817
+Epoch  34 Update  4340 Cost  0.0036122975871
+Epoch  34 Update  4350 Cost  0.00849337596446
+Epoch  34 Update  4360 Cost  0.000918158621062
+Epoch  34 Update  4370 Cost  5.36824190931e-05
+Seen 1998 samples
+Epoch  35 Update  4380 Cost  0.000223948154598
+Epoch  35 Update  4390 Cost  2.93723969662e-05
+Epoch  35 Update  4400 Cost  5.54802463739e-05
+Epoch  35 Update  4410 Cost  1.09824804895e-05
+Epoch  35 Update  4420 Cost  0.000273860350717
+Epoch  35 Update  4430 Cost  1.37245324368e-05
+Epoch  35 Update  4440 Cost  8.57593295223e-06
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.15238095238095239, 'Test ', 0.248)
+Epoch  35 Update  4450 Cost  0.0495998449624
+Epoch  35 Update  4460 Cost  0.00132008607034
+Epoch  35 Update  4470 Cost  0.0010885578813
+Epoch  35 Update  4480 Cost  0.00076592178084
+Epoch  35 Update  4490 Cost  0.00099286925979
+Epoch  35 Update  4500 Cost  0.000101230034488
+Seen 1998 samples
+Epoch  36 Update  4510 Cost  0.00013525968825
+Epoch  36 Update  4520 Cost  2.98770419249e-06
+Epoch  36 Update  4530 Cost  9.5753770438e-05
+Epoch  36 Update  4540 Cost  0.000402679288527
+Epoch  36 Update  4550 Cost  3.01005729852e-06
+Epoch  36 Update  4560 Cost  5.14090743309e-07
+Epoch  36 Update  4570 Cost  0.000884927867446
+Epoch  36 Update  4580 Cost  0.00193170446437
+Epoch  36 Update  4590 Cost  2.81870179606e-05
+Epoch  36 Update  4600 Cost  0.00337867834605
+Epoch  36 Update  4610 Cost  0.000115037684736
+Epoch  36 Update  4620 Cost  0.0144508536905
+Seen 1998 samples
+Epoch  37 Update  4630 Cost  0.000321199651808
+Epoch  37 Update  4640 Cost  0.000743073527701
+Epoch  37 Update  4650 Cost  0.00119440106209
+Epoch  37 Update  4660 Cost  0.000278552761301
+Epoch  37 Update  4670 Cost  0.000298346538329
+Epoch  37 Update  4680 Cost  0.000182633433724
+Epoch  37 Update  4690 Cost  0.000234644525335
+Epoch  37 Update  4700 Cost  0.000170346713276
+Epoch  37 Update  4710 Cost  0.000577070808504
+Epoch  37 Update  4720 Cost  0.00951752346009
+Epoch  37 Update  4730 Cost  2.8944137739e-05
+Epoch  37 Update  4740 Cost  0.000866071903147
+Epoch  37 Update  4750 Cost  0.000128210915136
+Seen 1998 samples
+Epoch  38 Update  4760 Cost  0.000722488912288
+Epoch  38 Update  4770 Cost  0.000492673716508
+Epoch  38 Update  4780 Cost  3.6604305933e-05
+Epoch  38 Update  4790 Cost  7.37810405553e-05
+Epoch  38 Update  4800 Cost  2.82449582301e-05
+Epoch  38 Update  4810 Cost  0.0533172599971
+('Train ', 0.13713713713713716, 'Valid ', 0.30476190476190479, 'Test ', 0.45999999999999996)
+Epoch  38 Update  4820 Cost  0.0204527582973
+Epoch  38 Update  4830 Cost  0.0017902586842
+Epoch  38 Update  4840 Cost  0.00153166311793
+Epoch  38 Update  4850 Cost  0.00124641472939
+Epoch  38 Update  4860 Cost  3.08691960527e-05
+Epoch  38 Update  4870 Cost  0.000114178968943
+Seen 1998 samples
+Epoch  39 Update  4880 Cost  0.000151420521433
+Epoch  39 Update  4890 Cost  0.000380844663596
+Epoch  39 Update  4900 Cost  3.38700228895e-05
+Epoch  39 Update  4910 Cost  0.000161424235557
+Epoch  39 Update  4920 Cost  7.80669943197e-05
+Epoch  39 Update  4930 Cost  1.11092012958e-05
+Epoch  39 Update  4940 Cost  7.6186392107e-05
+Epoch  39 Update  4950 Cost  0.0021830026526
+Epoch  39 Update  4960 Cost  0.000477576133562
+Epoch  39 Update  4970 Cost  7.99991685199e-05
+Epoch  39 Update  4980 Cost  0.000753967673518
+Epoch  39 Update  4990 Cost  2.51045639743e-05
+Epoch  39 Update  5000 Cost  0.0011145878816
+Seen 1998 samples
+Epoch  40 Update  5010 Cost  0.00793991051614
+Epoch  40 Update  5020 Cost  4.76454551972e-05
+Epoch  40 Update  5030 Cost  0.000136249931529
+Epoch  40 Update  5040 Cost  1.83968022611e-05
+Epoch  40 Update  5050 Cost  5.49288306502e-05
+Epoch  40 Update  5060 Cost  0.000110710199806
+Epoch  40 Update  5070 Cost  0.000229874014622
+Epoch  40 Update  5080 Cost  3.87303080061e-05
+Epoch  40 Update  5090 Cost  4.47788170277e-06
+Epoch  40 Update  5100 Cost  0.000167733582202
+Epoch  40 Update  5110 Cost  0.00398931466043
+Epoch  40 Update  5120 Cost  5.1288971008e-05
+Seen 1998 samples
+Epoch  41 Update  5130 Cost  0.00951698049903
+Epoch  41 Update  5140 Cost  0.00442940508947
+Epoch  41 Update  5150 Cost  0.00205940264277
+Epoch  41 Update  5160 Cost  0.00285512418486
+Epoch  41 Update  5170 Cost  0.000214176558075
+Epoch  41 Update  5180 Cost  0.000365354149835
+('Train ', 0.0, 'Valid ', 0.15238095238095239, 'Test ', 0.22799999999999998)
+Epoch  41 Update  5190 Cost  9.83513928077e-06
+Epoch  41 Update  5200 Cost  0.000804639712442
+Epoch  41 Update  5210 Cost  1.36346341151e-06
+Epoch  41 Update  5220 Cost  0.000126574857859
+Epoch  41 Update  5230 Cost  0.000167810314451
+Epoch  41 Update  5240 Cost  0.000491554790642
+Epoch  41 Update  5250 Cost  8.17436614398e-07
+Seen 1998 samples
+Epoch  42 Update  5260 Cost  0.000145410813275
+Epoch  42 Update  5270 Cost  0.000184317264939
+Epoch  42 Update  5280 Cost  0.000177091831574
+Epoch  42 Update  5290 Cost  2.46459021582e-05
+Epoch  42 Update  5300 Cost  6.10186361882e-05
+Epoch  42 Update  5310 Cost  0.000396502378862
+Epoch  42 Update  5320 Cost  0.000314722768962
+Epoch  42 Update  5330 Cost  0.000791463826317
+Epoch  42 Update  5340 Cost  0.0106495851651
+Epoch  42 Update  5350 Cost  5.99783152211e-06
+Epoch  42 Update  5360 Cost  0.000219788125833
+Epoch  42 Update  5370 Cost  1.19955097944e-06
+Seen 1998 samples
+Epoch  43 Update  5380 Cost  0.000432941189501
+Epoch  43 Update  5390 Cost  0.000346106971847
+Epoch  43 Update  5400 Cost  5.93666845816e-05
+Epoch  43 Update  5410 Cost  2.51594228757e-05
+Epoch  43 Update  5420 Cost  0.000136057278723
+Epoch  43 Update  5430 Cost  3.68807832274e-06
+Epoch  43 Update  5440 Cost  5.41475310456e-05
+Epoch  43 Update  5450 Cost  3.84951890737e-05
+Epoch  43 Update  5460 Cost  3.6955300402e-06
+Epoch  43 Update  5470 Cost  0.000166361031006
+Epoch  43 Update  5480 Cost  1.40303363878e-05
+Epoch  43 Update  5490 Cost  2.0483344997e-05
+Epoch  43 Update  5500 Cost  0.000321500177961
+Seen 1998 samples
+Epoch  44 Update  5510 Cost  1.30385740249e-06
+Epoch  44 Update  5520 Cost  5.58794340577e-07
+Epoch  44 Update  5530 Cost  3.85198836739e-06
+Epoch  44 Update  5540 Cost  1.71363595314e-07
+Epoch  44 Update  5550 Cost  1.5497307686e-06
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.248)
+Epoch  44 Update  5560 Cost  5.17833132108e-06
+Epoch  44 Update  5570 Cost  3.25598398376e-06
+Epoch  44 Update  5580 Cost  6.07978745393e-06
+Epoch  44 Update  5590 Cost  0.000308656395646
+Epoch  44 Update  5600 Cost  4.19113021053e-05
+Epoch  44 Update  5610 Cost  1.88481681107e-05
+Epoch  44 Update  5620 Cost  1.10500786832e-05
+Seen 1998 samples
+Epoch  45 Update  5630 Cost  5.37208916285e-06
+Epoch  45 Update  5640 Cost  2.25755093197e-06
+Epoch  45 Update  5650 Cost  3.07253249048e-05
+Epoch  45 Update  5660 Cost  4.32134669381e-07
+Epoch  45 Update  5670 Cost  1.59944174811e-05
+Epoch  45 Update  5680 Cost  5.57167331863e-05
+Epoch  45 Update  5690 Cost  4.29845822509e-05
+Epoch  45 Update  5700 Cost  3.67322809325e-06
+Epoch  45 Update  5710 Cost  1.41561088185e-07
+Epoch  45 Update  5720 Cost  9.61128421295e-07
+Epoch  45 Update  5730 Cost  3.04256154777e-05
+Epoch  45 Update  5740 Cost  3.88983426092e-05
+Epoch  45 Update  5750 Cost  1.60934064297e-06
+Seen 1998 samples
+Epoch  46 Update  5760 Cost  0.000245541159529
+Epoch  46 Update  5770 Cost  3.14911085297e-05
+Epoch  46 Update  5780 Cost  5.48369371245e-06
+Epoch  46 Update  5790 Cost  0.000236408857745
+Epoch  46 Update  5800 Cost  6.78030801282e-06
+Epoch  46 Update  5810 Cost  2.16699681914e-05
+Epoch  46 Update  5820 Cost  3.84825798392e-05
+Epoch  46 Update  5830 Cost  1.24133393911e-05
+Epoch  46 Update  5840 Cost  9.06780405785e-06
+Epoch  46 Update  5850 Cost  4.26051155955e-05
+Epoch  46 Update  5860 Cost  4.9846166803e-06
+Epoch  46 Update  5870 Cost  3.81284007744e-05
+Seen 1998 samples
+Epoch  47 Update  5880 Cost  4.25438884122e-06
+Epoch  47 Update  5890 Cost  3.57628891834e-07
+Epoch  47 Update  5900 Cost  5.93819686401e-06
+Epoch  47 Update  5910 Cost  2.60774550043e-06
+Epoch  47 Update  5920 Cost  2.08616611985e-07
+('Train ', 0.0, 'Valid ', 0.12380952380952381, 'Test ', 0.246)
+Epoch  47 Update  5930 Cost  0.00380975124426
+Epoch  47 Update  5940 Cost  0.010864331387
+Epoch  47 Update  5950 Cost  0.00160104967654
+Epoch  47 Update  5960 Cost  0.00130927946884
+Epoch  47 Update  5970 Cost  0.000759602000471
+Epoch  47 Update  5980 Cost  0.0003433705715
+Epoch  47 Update  5990 Cost  0.00070028367918
+Epoch  47 Update  6000 Cost  0.000688569329213
+Seen 1998 samples
+Epoch  48 Update  6010 Cost  0.000111071523861
+Epoch  48 Update  6020 Cost  3.49601868948e-05
+Epoch  48 Update  6030 Cost  0.00109501671977
+Epoch  48 Update  6040 Cost  0.00030263629742
+Epoch  48 Update  6050 Cost  0.000235638523009
+Epoch  48 Update  6060 Cost  1.46487445818e-05
+Epoch  48 Update  6070 Cost  4.88941986987e-05
+Epoch  48 Update  6080 Cost  0.000199334259378
+Epoch  48 Update  6090 Cost  9.01469247765e-05
+Epoch  48 Update  6100 Cost  6.75993578625e-05
+Epoch  48 Update  6110 Cost  0.000149909421452
+Epoch  48 Update  6120 Cost  7.22957847756e-05
+Seen 1998 samples
+Epoch  49 Update  6130 Cost  3.79986568078e-06
+Epoch  49 Update  6140 Cost  4.06216895499e-05
+Epoch  49 Update  6150 Cost  2.51976380241e-05
+Epoch  49 Update  6160 Cost  3.88679036405e-05
+Epoch  49 Update  6170 Cost  4.61937531782e-07
+Epoch  49 Update  6180 Cost  1.38065151987e-05
+Epoch  49 Update  6190 Cost  2.10108373722e-06
+Epoch  49 Update  6200 Cost  4.11279870605e-06
+Epoch  49 Update  6210 Cost  1.44541661484e-06
+Epoch  49 Update  6220 Cost  1.8193064534e-05
+Epoch  49 Update  6230 Cost  3.6394540075e-05
+Epoch  49 Update  6240 Cost  1.1191725207e-05
+Epoch  49 Update  6250 Cost  7.48487082092e-06
+Seen 1998 samples
+Epoch  50 Update  6260 Cost  2.53738544416e-05
+Epoch  50 Update  6270 Cost  3.94881340071e-07
+Epoch  50 Update  6280 Cost  6.3047016738e-05
+Epoch  50 Update  6290 Cost  5.565824722e-06
+('Train ', 0.0, 'Valid ', 0.12380952380952381, 'Test ', 0.25)
+Epoch  50 Update  6300 Cost  6.39291920379e-06
+Epoch  50 Update  6310 Cost  1.77386191353e-05
+Epoch  50 Update  6320 Cost  2.90572984341e-07
+Epoch  50 Update  6330 Cost  1.91481944967e-06
+Epoch  50 Update  6340 Cost  1.94451768039e-05
+Epoch  50 Update  6350 Cost  1.17720082926e-06
+Epoch  50 Update  6360 Cost  0.050197225064
+Epoch  50 Update  6370 Cost  0.000940397323575
+Seen 1998 samples
+Epoch  51 Update  6380 Cost  2.05865817406e-05
+Epoch  51 Update  6390 Cost  0.000721179589164
+Epoch  51 Update  6400 Cost  0.000436227855971
+Epoch  51 Update  6410 Cost  7.95471423771e-05
+Epoch  51 Update  6420 Cost  5.74137520744e-05
+Epoch  51 Update  6430 Cost  0.000332435709424
+Epoch  51 Update  6440 Cost  0.000195996079128
+Epoch  51 Update  6450 Cost  0.000545413349755
+Epoch  51 Update  6460 Cost  3.59342302545e-05
+Epoch  51 Update  6470 Cost  3.08154958475e-05
+Epoch  51 Update  6480 Cost  4.15622780565e-05
+Epoch  51 Update  6490 Cost  0.00018611086125
+Epoch  51 Update  6500 Cost  9.81494886219e-05
+Seen 1998 samples
+Epoch  52 Update  6510 Cost  7.4432641668e-06
+Epoch  52 Update  6520 Cost  0.000616748351604
+Epoch  52 Update  6530 Cost  6.4293606556e-05
+Epoch  52 Update  6540 Cost  0.000187242898392
+Epoch  52 Update  6550 Cost  1.25170527099e-06
+Epoch  52 Update  6560 Cost  1.38593422889e-05
+Epoch  52 Update  6570 Cost  0.00265145045705
+Epoch  52 Update  6580 Cost  0.00106159225106
+Epoch  52 Update  6590 Cost  0.000608263362665
+Epoch  52 Update  6600 Cost  0.000187583820662
+Epoch  52 Update  6610 Cost  0.00108925497625
+Epoch  52 Update  6620 Cost  0.00181906751823
+Seen 1998 samples
+Epoch  53 Update  6630 Cost  7.19144227332e-05
+Epoch  53 Update  6640 Cost  0.00019158894429
+Epoch  53 Update  6650 Cost  2.30779278354e-05
+Epoch  53 Update  6660 Cost  4.19872885686e-05
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.21999999999999997)
+Epoch  53 Update  6670 Cost  8.66110349307e-05
+Epoch  53 Update  6680 Cost  0.000173278327566
+Epoch  53 Update  6690 Cost  7.66456796555e-05
+Epoch  53 Update  6700 Cost  3.17401963912e-06
+Epoch  53 Update  6710 Cost  6.90736342221e-05
+Epoch  53 Update  6720 Cost  3.73279704036e-06
+Epoch  53 Update  6730 Cost  1.80305232789e-06
+Epoch  53 Update  6740 Cost  0.000690193613991
+Epoch  53 Update  6750 Cost  9.085716556e-06
+Seen 1998 samples
+Epoch  54 Update  6760 Cost  0.000291444215691
+Epoch  54 Update  6770 Cost  0.00134945230093
+Epoch  54 Update  6780 Cost  2.8107988328e-05
+Epoch  54 Update  6790 Cost  2.49656004598e-05
+Epoch  54 Update  6800 Cost  0.00083140283823
+Epoch  54 Update  6810 Cost  7.13412737241e-05
+Epoch  54 Update  6820 Cost  0.000121678211144
+Epoch  54 Update  6830 Cost  5.02926241097e-06
+Epoch  54 Update  6840 Cost  0.000498452805914
+Epoch  54 Update  6850 Cost  3.45716011907e-06
+Epoch  54 Update  6860 Cost  4.78190086142e-05
+Epoch  54 Update  6870 Cost  0.000369886984117
+Seen 1998 samples
+Epoch  55 Update  6880 Cost  5.4465372159e-06
+Epoch  55 Update  6890 Cost  1.39326891713e-06
+Epoch  55 Update  6900 Cost  4.35862375525e-06
+Epoch  55 Update  6910 Cost  3.35276922669e-07
+Epoch  55 Update  6920 Cost  8.50139986142e-06
+Epoch  55 Update  6930 Cost  3.445186303e-05
+Epoch  55 Update  6940 Cost  1.30765902213e-05
+Epoch  55 Update  6950 Cost  2.76418518297e-06
+Epoch  55 Update  6960 Cost  2.97283213513e-06
+Epoch  55 Update  6970 Cost  9.58916934906e-05
+Epoch  55 Update  6980 Cost  5.15599367645e-06
+Epoch  55 Update  6990 Cost  5.21854199178e-05
+Epoch  55 Update  7000 Cost  0.000122707075207
+Seen 1998 samples
+Epoch  56 Update  7010 Cost  1.28150941237e-06
+Epoch  56 Update  7020 Cost  -0.0
+Epoch  56 Update  7030 Cost  1.49757522649e-06
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.26800000000000002)
+Epoch  56 Update  7040 Cost  6.82509016769e-06
+Epoch  56 Update  7050 Cost  3.725291009e-08
+Epoch  56 Update  7060 Cost  1.49011697204e-07
+Epoch  56 Update  7070 Cost  3.35276808983e-07
+Epoch  56 Update  7080 Cost  5.36443394594e-07
+Epoch  56 Update  7090 Cost  1.95069769688e-05
+Epoch  56 Update  7100 Cost  0.000266962160822
+Epoch  56 Update  7110 Cost  1.62423407346e-06
+Epoch  56 Update  7120 Cost  2.01168245439e-06
+Seen 1998 samples
+Epoch  57 Update  7130 Cost  2.59345033555e-05
+Epoch  57 Update  7140 Cost  1.11023427962e-05
+Epoch  57 Update  7150 Cost  1.71363595314e-07
+Epoch  57 Update  7160 Cost  1.78573427547e-05
+Epoch  57 Update  7170 Cost  1.66894278664e-06
+Epoch  57 Update  7180 Cost  3.72529065373e-08
+Epoch  57 Update  7190 Cost  8.01726764621e-06
+Epoch  57 Update  7200 Cost  1.2026348486e-05
+Epoch  57 Update  7210 Cost  9.38777532156e-07
+Epoch  57 Update  7220 Cost  3.31555861521e-06
+Epoch  57 Update  7230 Cost  7.94281731942e-06
+Epoch  57 Update  7240 Cost  3.05423163809e-05
+Epoch  57 Update  7250 Cost  6.26713426755e-06
+Seen 1998 samples
+Epoch  58 Update  7260 Cost  1.54681401909e-05
+Epoch  58 Update  7270 Cost  8.79171125234e-07
+Epoch  58 Update  7280 Cost  0.000418452080339
+Epoch  58 Update  7290 Cost  5.21558513356e-06
+Epoch  58 Update  7300 Cost  5.58817555429e-06
+Epoch  58 Update  7310 Cost  4.54486325907e-07
+Epoch  58 Update  7320 Cost  4.54486070112e-07
+Epoch  58 Update  7330 Cost  3.07207119477e-05
+Epoch  58 Update  7340 Cost  6.1096184254e-06
+Epoch  58 Update  7350 Cost  2.55752584053e-05
+Epoch  58 Update  7360 Cost  1.51992981046e-06
+Epoch  58 Update  7370 Cost  1.14739589208e-06
+Seen 1998 samples
+Epoch  59 Update  7380 Cost  2.36186383518e-06
+Epoch  59 Update  7390 Cost  3.2261555134e-06
+Epoch  59 Update  7400 Cost  7.22709899037e-07
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.26600000000000001)
+Epoch  59 Update  7410 Cost  3.4418560972e-05
+Epoch  59 Update  7420 Cost  1.49011629702e-08
+Epoch  59 Update  7430 Cost  3.1442045838e-06
+Epoch  59 Update  7440 Cost  1.05281196738e-05
+Epoch  59 Update  7450 Cost  1.42689441418e-05
+Epoch  59 Update  7460 Cost  4.44358265668e-05
+Epoch  59 Update  7470 Cost  1.20700474326e-06
+Epoch  59 Update  7480 Cost  2.00261674763e-05
+Epoch  59 Update  7490 Cost  2.23517453435e-08
+Epoch  59 Update  7500 Cost  1.26369313875e-05
+Seen 1998 samples
+Epoch  60 Update  7510 Cost  5.73696183892e-07
+Epoch  60 Update  7520 Cost  8.65785932547e-06
+Epoch  60 Update  7530 Cost  6.83042453602e-05
+Epoch  60 Update  7540 Cost  3.36775269716e-06
+Epoch  60 Update  7550 Cost  1.50660307554e-05
+Epoch  60 Update  7560 Cost  1.98933184947e-06
+Epoch  60 Update  7570 Cost  1.02081266959e-05
+Epoch  60 Update  7580 Cost  2.15325121644e-06
+Epoch  60 Update  7590 Cost  -0.0
+Epoch  60 Update  7600 Cost  7.30158490114e-07
+Epoch  60 Update  7610 Cost  1.12504767458e-06
+Epoch  60 Update  7620 Cost  -0.0
+Seen 1998 samples
+Epoch  61 Update  7630 Cost  7.00357816186e-07
+Epoch  61 Update  7640 Cost  2.77911249214e-06
+Epoch  61 Update  7650 Cost  1.4901179668e-07
+Epoch  61 Update  7660 Cost  2.31714557231e-06
+Epoch  61 Update  7670 Cost  6.33308718534e-06
+Epoch  61 Update  7680 Cost  -0.0
+Epoch  61 Update  7690 Cost  1.20486074593e-05
+Epoch  61 Update  7700 Cost  6.33301397102e-07
+Epoch  61 Update  7710 Cost  3.92700821976e-05
+Epoch  61 Update  7720 Cost  -0.0
+Epoch  61 Update  7730 Cost  2.89084846372e-06
+Epoch  61 Update  7740 Cost  6.70552395832e-08
+Epoch  61 Update  7750 Cost  2.77592198472e-06
+Seen 1998 samples
+Epoch  62 Update  7760 Cost  2.75671652616e-07
+Epoch  62 Update  7770 Cost  5.7369680917e-07
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.27800000000000002)
+Epoch  62 Update  7780 Cost  4.4703490687e-08
+Epoch  62 Update  7790 Cost  7.15257385764e-07
+Epoch  62 Update  7800 Cost  4.24684031941e-07
+Epoch  62 Update  7810 Cost  6.03499870522e-07
+Epoch  62 Update  7820 Cost  9.93228968582e-06
+Epoch  62 Update  7830 Cost  6.55653707327e-07
+Epoch  62 Update  7840 Cost  4.84289557789e-07
+Epoch  62 Update  7850 Cost  0.000179194903467
+Epoch  62 Update  7860 Cost  2.25008852794e-06
+Epoch  62 Update  7870 Cost  3.62107425644e-06
+Seen 1998 samples
+Epoch  63 Update  7880 Cost  3.72529065373e-08
+Epoch  63 Update  7890 Cost  3.725291009e-08
+Epoch  63 Update  7900 Cost  7.67412188907e-07
+Epoch  63 Update  7910 Cost  7.4505814851e-09
+Epoch  63 Update  7920 Cost  1.13929763756e-05
+Epoch  63 Update  7930 Cost  5.18570595887e-06
+Epoch  63 Update  7940 Cost  8.72496548254e-06
+Epoch  63 Update  7950 Cost  7.19021772966e-06
+Epoch  63 Update  7960 Cost  1.13249745937e-06
+Epoch  63 Update  7970 Cost  -0.0
+Epoch  63 Update  7980 Cost  7.30943474991e-06
+Epoch  63 Update  7990 Cost  8.12116581983e-07
+Epoch  63 Update  8000 Cost  1.70299010449e-08
+Seen 1998 samples
+Epoch  64 Update  8010 Cost  3.72529136428e-08
+Epoch  64 Update  8020 Cost  5.50618187845e-06
+Epoch  64 Update  8030 Cost  1.71363595314e-07
+Epoch  64 Update  8040 Cost  1.49011754047e-07
+Epoch  64 Update  8050 Cost  7.4505814851e-09
+Epoch  64 Update  8060 Cost  1.50705855049e-05
+Epoch  64 Update  8070 Cost  6.87619613018e-05
+Epoch  64 Update  8080 Cost  8.02673312137e-05
+Epoch  64 Update  8090 Cost  2.64738027909e-05
+Epoch  64 Update  8100 Cost  8.1956400777e-08
+Epoch  64 Update  8110 Cost  1.63912886819e-07
+Epoch  64 Update  8120 Cost  5.58795136385e-07
+Seen 1998 samples
+Epoch  65 Update  8130 Cost  4.74607622891e-06
+Epoch  65 Update  8140 Cost  8.04635637905e-05
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.29000000000000004)
+Epoch  65 Update  8150 Cost  9.53681251303e-07
+Epoch  65 Update  8160 Cost  2.23517453435e-08
+Epoch  65 Update  8170 Cost  3.66622007277e-05
+Epoch  65 Update  8180 Cost  8.19566764676e-07
+Epoch  65 Update  8190 Cost  4.39585392087e-07
+Epoch  65 Update  8200 Cost  2.38418806475e-07
+Epoch  65 Update  8210 Cost  7.30160991225e-07
+Epoch  65 Update  8220 Cost  4.54499377156e-06
+Epoch  65 Update  8230 Cost  2.32460661209e-06
+Epoch  65 Update  8240 Cost  7.15259773187e-07
+Epoch  65 Update  8250 Cost  -0.0
+Seen 1998 samples
+Epoch  66 Update  8260 Cost  1.56462306222e-07
+Epoch  66 Update  8270 Cost  8.12118457816e-07
+Epoch  66 Update  8280 Cost  1.93715337105e-07
+Epoch  66 Update  8290 Cost  1.31876151954e-06
+Epoch  66 Update  8300 Cost  8.1956400777e-08
+Epoch  66 Update  8310 Cost  3.03988008454e-06
+Epoch  66 Update  8320 Cost  2.70196978818e-05
+Epoch  66 Update  8330 Cost  7.37611685508e-07
+Epoch  66 Update  8340 Cost  2.83122716382e-07
+Epoch  66 Update  8350 Cost  2.53323992183e-06
+Epoch  66 Update  8360 Cost  -0.0
+Epoch  66 Update  8370 Cost  1.16164619612e-05
+Seen 1998 samples
+Epoch  67 Update  8380 Cost  8.45685462991e-06
+Epoch  67 Update  8390 Cost  3.42727645375e-07
+Epoch  67 Update  8400 Cost  5.43894032035e-07
+Epoch  67 Update  8410 Cost  1.41562327372e-06
+Epoch  67 Update  8420 Cost  1.78814175911e-07
+Epoch  67 Update  8430 Cost  3.725291009e-08
+Epoch  67 Update  8440 Cost  4.13520592701e-06
+Epoch  67 Update  8450 Cost  2.30971659221e-06
+Epoch  67 Update  8460 Cost  5.2420225984e-05
+Epoch  67 Update  8470 Cost  1.86266197488e-06
+Epoch  67 Update  8480 Cost  -0.0
+Epoch  67 Update  8490 Cost  2.33952505369e-06
+Epoch  67 Update  8500 Cost  2.63963670477e-07
+Seen 1998 samples
+Epoch  68 Update  8510 Cost  1.05878680188e-05
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.27200000000000002)
+Epoch  68 Update  8520 Cost  2.56053663179e-05
+Epoch  68 Update  8530 Cost  1.49011629702e-08
+Epoch  68 Update  8540 Cost  1.42916205732e-05
+Epoch  68 Update  8550 Cost  1.41561102396e-07
+Epoch  68 Update  8560 Cost  1.72854845459e-06
+Epoch  68 Update  8570 Cost  3.20375789897e-07
+Epoch  68 Update  8580 Cost  -0.0
+Epoch  68 Update  8590 Cost  5.17091575603e-06
+Epoch  68 Update  8600 Cost  9.83482436823e-07
+Epoch  68 Update  8610 Cost  4.47034942397e-08
+Epoch  68 Update  8620 Cost  5.43894600469e-07
+Seen 1998 samples
+Epoch  69 Update  8630 Cost  2.08616398822e-07
+Epoch  69 Update  8640 Cost  -0.0
+Epoch  69 Update  8650 Cost  7.4505814851e-09
+Epoch  69 Update  8660 Cost  2.84614998236e-06
+Epoch  69 Update  8670 Cost  7.96502135927e-05
+Epoch  69 Update  8680 Cost  2.41882080445e-05
+Epoch  69 Update  8690 Cost  7.97216955561e-07
+Epoch  69 Update  8700 Cost  9.68575690763e-08
+Epoch  69 Update  8710 Cost  1.60543240781e-05
+Epoch  69 Update  8720 Cost  6.63105140575e-07
+Epoch  69 Update  8730 Cost  5.78190520173e-06
+Epoch  69 Update  8740 Cost  -0.0
+Epoch  69 Update  8750 Cost  1.06437221348e-06
+Seen 1998 samples
+Epoch  70 Update  8760 Cost  1.72110355834e-06
+Epoch  70 Update  8770 Cost  2.11600081457e-06
+Epoch  70 Update  8780 Cost  3.02691314573e-05
+Epoch  70 Update  8790 Cost  3.72529136428e-08
+Epoch  70 Update  8800 Cost  2.12343843486e-06
+Epoch  70 Update  8810 Cost  2.98023294931e-08
+Epoch  70 Update  8820 Cost  4.84288420921e-07
+Epoch  70 Update  8830 Cost  3.63580111298e-05
+Epoch  70 Update  8840 Cost  5.28992075033e-07
+Epoch  70 Update  8850 Cost  2.53319939247e-07
+Epoch  70 Update  8860 Cost  8.94070311119e-08
+Epoch  70 Update  8870 Cost  0.000112459412776
+Seen 1998 samples
+Epoch  71 Update  8880 Cost  2.97008773487e-05
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.28000000000000003)
+Epoch  71 Update  8890 Cost  4.12258923461e-05
+Epoch  71 Update  8900 Cost  8.49369257594e-07
+Epoch  71 Update  8910 Cost  2.6077077564e-07
+Epoch  71 Update  8920 Cost  1.2591583527e-06
+Epoch  71 Update  8930 Cost  1.11759391075e-06
+Epoch  71 Update  8940 Cost  7.52512505642e-07
+Epoch  71 Update  8950 Cost  1.03563831999e-06
+Epoch  71 Update  8960 Cost  2.46973504545e-05
+Epoch  71 Update  8970 Cost  2.70147320407e-05
+Epoch  71 Update  8980 Cost  9.68576117089e-08
+Epoch  71 Update  8990 Cost  9.68576259197e-08
+Epoch  71 Update  9000 Cost  1.44754196185e-07
+Seen 1998 samples
+Epoch  72 Update  9010 Cost  3.94881567445e-07
+Epoch  72 Update  9020 Cost  6.76537547406e-06
+Epoch  72 Update  9030 Cost  4.4703490687e-08
+Epoch  72 Update  9040 Cost  1.81856412382e-05
+Epoch  72 Update  9050 Cost  3.725291009e-08
+Epoch  72 Update  9060 Cost  9.31326098907e-07
+Epoch  72 Update  9070 Cost  1.04759383248e-05
+Epoch  72 Update  9080 Cost  8.19564220933e-08
+Epoch  72 Update  9090 Cost  2.38418749632e-07
+Epoch  72 Update  9100 Cost  2.97573806165e-05
+Epoch  72 Update  9110 Cost  2.98023259404e-08
+Epoch  72 Update  9120 Cost  7.4505814851e-09
+Seen 1998 samples
+Epoch  73 Update  9130 Cost  2.23517453435e-08
+Epoch  73 Update  9140 Cost  1.63912915241e-07
+Epoch  73 Update  9150 Cost  1.04308213622e-07
+Epoch  73 Update  9160 Cost  5.58795420602e-07
+Epoch  73 Update  9170 Cost  1.16161572805e-05
+Epoch  73 Update  9180 Cost  1.56462292011e-07
+Epoch  73 Update  9190 Cost  9.02329702512e-06
+Epoch  73 Update  9200 Cost  9.2387750783e-07
+Epoch  73 Update  9210 Cost  1.19209360605e-07
+Epoch  73 Update  9220 Cost  1.49011629702e-08
+Epoch  73 Update  9230 Cost  7.45058343909e-08
+Epoch  73 Update  9240 Cost  4.48532728115e-06
+Epoch  73 Update  9250 Cost  2.73582263617e-05
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.27600000000000002)
+Seen 1998 samples
+Epoch  74 Update  9260 Cost  8.34503043734e-06
+Epoch  74 Update  9270 Cost  4.48540868092e-06
+Epoch  74 Update  9280 Cost  1.89980619325e-05
+Epoch  74 Update  9290 Cost  1.94462268155e-06
+Epoch  74 Update  9300 Cost  7.4505814851e-09
+Epoch  74 Update  9310 Cost  1.42918270285e-05
+Epoch  74 Update  9320 Cost  4.48540868092e-06
+Epoch  74 Update  9330 Cost  1.52737993631e-06
+Epoch  74 Update  9340 Cost  1.49011725625e-07
+Epoch  74 Update  9350 Cost  2.56304520008e-06
+Epoch  74 Update  9360 Cost  6.10948632129e-07
+Epoch  74 Update  9370 Cost  2.04148591365e-06
+Seen 1998 samples
+Epoch  75 Update  9380 Cost  3.35276922669e-07
+Epoch  75 Update  9390 Cost  4.09782899169e-07
+Epoch  75 Update  9400 Cost  8.94069955848e-08
+Epoch  75 Update  9410 Cost  1.80304925834e-06
+Epoch  75 Update  9420 Cost  -0.0
+Epoch  75 Update  9430 Cost  7.4505814851e-09
+Epoch  75 Update  9440 Cost  1.04308206517e-07
+Epoch  75 Update  9450 Cost  1.26660995647e-06
+Epoch  75 Update  9460 Cost  2.78655193142e-06
+Epoch  75 Update  9470 Cost  3.68809151041e-06
+Epoch  75 Update  9480 Cost  1.51993208419e-06
+Epoch  75 Update  9490 Cost  7.22707966361e-07
+Epoch  75 Update  9500 Cost  1.70299010449e-08
+Seen 1998 samples
+Epoch  76 Update  9510 Cost  1.28151054923e-06
+Epoch  76 Update  9520 Cost  3.89677370549e-06
+Epoch  76 Update  9530 Cost  7.98951878096e-05
+Epoch  76 Update  9540 Cost  -0.0
+Epoch  76 Update  9550 Cost  5.96046660917e-08
+Epoch  76 Update  9560 Cost  0.000158477545483
+Epoch  76 Update  9570 Cost  4.23950996264e-06
+Epoch  76 Update  9580 Cost  7.4505814851e-09
+Epoch  76 Update  9590 Cost  1.10501796371e-05
+Epoch  76 Update  9600 Cost  5.96046589862e-08
+Epoch  76 Update  9610 Cost  1.02818728465e-06
+Epoch  76 Update  9620 Cost  1.06543552647e-06
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.27400000000000002)
+Seen 1998 samples
+Epoch  77 Update  9630 Cost  2.47361140282e-06
+Epoch  77 Update  9640 Cost  1.41561187661e-07
+Epoch  77 Update  9650 Cost  1.49011629702e-08
+Epoch  77 Update  9660 Cost  9.99945677904e-06
+Epoch  77 Update  9670 Cost  1.80590886885e-05
+Epoch  77 Update  9680 Cost  3.05474117113e-07
+Epoch  77 Update  9690 Cost  6.3330253397e-07
+Epoch  77 Update  9700 Cost  7.4505814851e-09
+Epoch  77 Update  9710 Cost  3.20083636325e-05
+Epoch  77 Update  9720 Cost  1.51248616476e-06
+Epoch  77 Update  9730 Cost  8.59194187797e-05
+Epoch  77 Update  9740 Cost  1.08563144749e-05
+Epoch  77 Update  9750 Cost  7.06744287982e-07
+Seen 1998 samples
+Epoch  78 Update  9760 Cost  5.14090970682e-07
+Epoch  78 Update  9770 Cost  5.96046589862e-08
+Epoch  78 Update  9780 Cost  2.72697207038e-06
+Epoch  78 Update  9790 Cost  7.4505814851e-09
+Epoch  78 Update  9800 Cost  1.9407214495e-05
+Epoch  78 Update  9810 Cost  2.73440878118e-06
+Epoch  78 Update  9820 Cost  8.41919586492e-07
+Epoch  78 Update  9830 Cost  2.52577342508e-06
+Epoch  78 Update  9840 Cost  5.96046660917e-08
+Epoch  78 Update  9850 Cost  6.0349850628e-07
+Epoch  78 Update  9860 Cost  1.64659468282e-06
+Epoch  78 Update  9870 Cost  3.56891837328e-06
+Seen 1998 samples
+Epoch  79 Update  9880 Cost  8.34467982713e-07
+Epoch  79 Update  9890 Cost  3.80391211365e-05
+Epoch  79 Update  9900 Cost  2.65245466835e-06
+Epoch  79 Update  9910 Cost  -0.0
+Epoch  79 Update  9920 Cost  5.21540854947e-08
+Epoch  79 Update  9930 Cost  -0.0
+Epoch  79 Update  9940 Cost  2.8163733532e-06
+Epoch  79 Update  9950 Cost  5.88598481954e-07
+Epoch  79 Update  9960 Cost  1.05799119865e-06
+Epoch  79 Update  9970 Cost  6.70552466886e-08
+Epoch  79 Update  9980 Cost  9.35117805057e-06
+Epoch  79 Update  9990 Cost  1.61679668054e-06
+Saving... Done
+('Train ', 0.0, 'Valid ', 0.1428571428571429, 'Test ', 0.27800000000000002)
+Epoch  79 Update  10000 Cost  -0.0
+Seen 1998 samples
+Epoch  80 Update  10010 Cost  3.13677196573e-06
+Epoch  80 Update  10020 Cost  3.21122865898e-06
+Epoch  80 Update  10030 Cost  2.09363770409e-06
+Epoch  80 Update  10040 Cost  7.4505814851e-09
+Epoch  80 Update  10050 Cost  6.55651888337e-07
+Epoch  80 Update  10060 Cost  2.05639412343e-06
+Epoch  80 Update  10070 Cost  6.4820329726e-07
+Epoch  80 Update  10080 Cost  2.16067007841e-07
+Epoch  80 Update  10090 Cost  2.01629773073e-05
+Epoch  80 Update  10100 Cost  8.49368575473e-07
+Epoch  80 Update  10110 Cost  7.52512903546e-07
+Epoch  80 Update  10120 Cost  7.4505814851e-09
+Seen 1998 samples
+Epoch  81 Update  10130 Cost  4.47035972684e-07
+Epoch  81 Update  10140 Cost  2.37670519709e-05
+Epoch  81 Update  10150 Cost  -0.0
+Epoch  81 Update  10160 Cost  6.85481336404e-06
+Epoch  81 Update  10170 Cost  1.00583315543e-06
+Epoch  81 Update  10180 Cost  5.96046731971e-08
+Epoch  81 Update  10190 Cost  1.26659998045e-07
+Epoch  81 Update  10200 Cost  4.02332602789e-07
+Epoch  81 Update  10210 Cost  1.45287992837e-06
+Epoch  81 Update  10220 Cost  -0.0
+Epoch  81 Update  10230 Cost  1.52738766701e-06
+Epoch  81 Update  10240 Cost  2.22775247494e-06
+Epoch  81 Update  10250 Cost  3.40598056425e-08
+Seen 1998 samples
+Epoch  82 Update  10260 Cost  2.86108138425e-06
+Epoch  82 Update  10270 Cost  1.47277914948e-05
+Epoch  82 Update  10280 Cost  7.4505814851e-09
+Epoch  82 Update  10290 Cost  1.26659969624e-07
+Epoch  82 Update  10300 Cost  -0.0
+Epoch  82 Update  10310 Cost  1.26659955413e-07
+Epoch  82 Update  10320 Cost  2.89708423225e-05
+Epoch  82 Update  10330 Cost  1.41561187661e-07
+Epoch  82 Update  10340 Cost  2.22030439545e-06
+Epoch  82 Update  10350 Cost  4.79835762235e-06
+Epoch  82 Update  10360 Cost  2.01165974545e-07
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.28800000000000003)
+Epoch  82 Update  10370 Cost  -0.0
+Seen 1998 samples
+Epoch  83 Update  10380 Cost  7.9577202996e-06
+Epoch  83 Update  10390 Cost  -0.0
+Epoch  83 Update  10400 Cost  3.89264787373e-05
+Epoch  83 Update  10410 Cost  4.02332517524e-07
+Epoch  83 Update  10420 Cost  7.97216728188e-07
+Epoch  83 Update  10430 Cost  5.21540854947e-08
+Epoch  83 Update  10440 Cost  7.4505814851e-09
+Epoch  83 Update  10450 Cost  2.53319996091e-07
+Epoch  83 Update  10460 Cost  2.08616555142e-07
+Epoch  83 Update  10470 Cost  3.18145225719e-06
+Epoch  83 Update  10480 Cost  3.725291009e-08
+Epoch  83 Update  10490 Cost  6.04269098403e-06
+Epoch  83 Update  10500 Cost  2.63963869429e-07
+Seen 1998 samples
+Epoch  84 Update  10510 Cost  4.58227486888e-06
+Epoch  84 Update  10520 Cost  5.96046731971e-08
+Epoch  84 Update  10530 Cost  3.94143216909e-06
+Epoch  84 Update  10540 Cost  2.87762704829e-05
+Epoch  84 Update  10550 Cost  5.51344726318e-07
+Epoch  84 Update  10560 Cost  7.4505814851e-09
+Epoch  84 Update  10570 Cost  1.56815949595e-05
+Epoch  84 Update  10580 Cost  4.69404221803e-06
+Epoch  84 Update  10590 Cost  1.16230137337e-06
+Epoch  84 Update  10600 Cost  4.4703490687e-08
+Epoch  84 Update  10610 Cost  1.94970361918e-05
+Epoch  84 Update  10620 Cost  3.09951792588e-06
+Seen 1998 samples
+Epoch  85 Update  10630 Cost  5.81902031627e-06
+Epoch  85 Update  10640 Cost  3.725291009e-08
+Epoch  85 Update  10650 Cost  1.36346909585e-06
+Epoch  85 Update  10660 Cost  4.76838692975e-07
+Epoch  85 Update  10670 Cost  6.25850702818e-07
+Epoch  85 Update  10680 Cost  9.08977426661e-07
+Epoch  85 Update  10690 Cost  5.57321936867e-06
+Epoch  85 Update  10700 Cost  1.11014423965e-06
+Epoch  85 Update  10710 Cost  5.88597174556e-07
+Epoch  85 Update  10720 Cost  7.4505814851e-09
+Epoch  85 Update  10730 Cost  2.98023294931e-08
+('Train ', 0.0, 'Valid ', 0.1333333333333333, 'Test ', 0.28800000000000003)
+Early Stop!
+Seen 1680 samples
+Train  0.0 Valid  0.12380952381 Test  0.25
+The code run for 86 epochs, with 54.900163 sec/epochs
+Training took 4721.4s
+
+Process finished with exit code 0
