@@ -94,7 +94,7 @@ def init_params(options):
     randn = numpy.random.rand(options['n_words'],
                               options['dim_proj'])
     params['Wemb'] = (0.01 * randn).astype(config.floatX)
-    
+    params['In']=(numpy.random.rand(options['dim_proj'],1)).astype(config.floatX)
     params = get_layer(options['encoder'])[0](options,
                                               params,
                                               prefix=options['encoder'])
@@ -203,7 +203,12 @@ def lstm_layer(tparams, state_below, options, prefix='lstm', mask=None):
 
         return h, c,ii,ff,oo
 
-    
+    attention_index=(tensor.dot(state_below,tparams['In'])) #得出的应是  step*n_samples*1 的东西
+    #attention_index=attention_index.reshape([nsteps,n_samples],ndim=None) #转换为 nstep*n_sample的矩阵
+    #attention_index=tensor.exp(attention_index) #取exp
+    #attention_index=attention_index/(attention_index.sum(axis=0)) #每一列相加 得到exp的和
+    #attention_index=attention_index.reshape([nsteps,n_samples,1],ndim=None) #还原到最开始的step*n_samples*1
+    attention_index=attention_index.repeat(options['dim_proj'],axis=2)
 
     state_below = (tensor.dot(state_below, tparams[_p(prefix, 'W')]) +
                    tparams[_p(prefix, 'b')])
@@ -230,7 +235,7 @@ def lstm_layer(tparams, state_below, options, prefix='lstm', mask=None):
                                                            dim_proj)],
                                 name=_p(prefix, '_layers'),
                                 n_steps=nsteps)
-    return rval[0],rval[2],rval[3],rval[4]
+    return rval[0],rval[2],rval[3],rval[4],attention_index
 
 
 # ff: Feed Forward (normal neural net), only useful to put after lstm
@@ -417,7 +422,7 @@ def build_model(tparams, options):
         #proj = (proj * mask[:, :, None]).sum(axis=0)#mean-pooling的加和部分，按照step相加
         proj=((proj*mask[:,:,None])*attention_index).sum(axis=0)
 
-        #proj = proj / mask.sum(axis=0)[:, None]
+        proj = proj / mask.sum(axis=0)[:, None]
     if options['use_dropout']:
         proj = dropout_layer(proj, use_noise, trng)
 
