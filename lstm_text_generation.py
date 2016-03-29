@@ -215,7 +215,8 @@ def main(num_epochs=NUM_EPOCHS):
     p = 0
     try:
         for it in xrange(data_size * num_epochs / BATCH_SIZE):
-            try_it_out() # Generate text using the p^th character as the start. 
+            try_it_out() # Generate text using the p^th character as the start.
+            #其实上面这个函数就是训练好了之后，测试一下往后生成２００个的状况是如何的
             
             avg_cost = 0;
             for _ in range(PRINT_FREQ):
