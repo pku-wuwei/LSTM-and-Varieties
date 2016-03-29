@@ -194,14 +194,14 @@ def main(num_epochs=NUM_EPOCHS):
         assert(len(generation_phrase)>=SEQ_LENGTH)
         sample_ix = []
         x,_ = gen_data(len(generation_phrase)-SEQ_LENGTH, 1, generation_phrase,0)
-        #这里的x是取了离末尾最近的２０个字符
+        #这里的x是取了离末尾最近的２０个字符,(1*20*78) 78那块是１－hot的形式
         for i in range(N):
             # Pick the character that got assigned the highest probability
             ix = np.argmax(probs(x).ravel())
             # Alternatively, to sample from the distribution instead:
             # ix = np.random.choice(np.arange(vocab_size), p=probs(x).ravel())
             sample_ix.append(ix)
-            x[:,0:SEQ_LENGTH-1,:] = x[:,1:,:]
+            x[:,0:SEQ_LENGTH-1,:] = x[:,1:,:] #从最早到倒数第二个，由原来的从第二个到最后一个代替
             x[:,SEQ_LENGTH-1,:] = 0
             x[0,SEQ_LENGTH-1,sample_ix[-1]] = 1. 
 
