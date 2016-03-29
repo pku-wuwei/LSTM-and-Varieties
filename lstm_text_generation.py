@@ -218,7 +218,7 @@ def main(num_epochs=NUM_EPOCHS):
             try_it_out() # Generate text using the p^th character as the start.
             #其实上面这个函数就是训练好了之后，测试一下往后生成２００个的状况是如何的
             
-            avg_cost = 0;
+            avg_cost = 0
             for _ in range(PRINT_FREQ):
                 x,y = gen_data(p)
                 
@@ -226,7 +226,7 @@ def main(num_epochs=NUM_EPOCHS):
                 p += SEQ_LENGTH + BATCH_SIZE - 1 
                 if(p+BATCH_SIZE+SEQ_LENGTH >= data_size):
                     print('Carriage Return')
-                    p = 0;
+                    p = 0
                 
                 ccc=train(x,y)
                 avg_cost += ccc[0]
