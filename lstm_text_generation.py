@@ -230,6 +230,7 @@ def main(num_epochs=NUM_EPOCHS):
                 
                 ccc=train(x,y)
                 avg_cost += ccc[0]
+                print (type(ccc[1]))
                 print ('LSTM output shape:\n{}\n\n'.format(ccc[1].shape))
             print("Epoch {} average loss = {}".format(it*1.0*PRINT_FREQ/data_size*BATCH_SIZE, avg_cost / PRINT_FREQ))
             #这个epoch的计算确实有点别致，总之就是总循环次数　it*1000*batch_size这么多次，再除以一整个文件一次的data_size，就是一个epoch
