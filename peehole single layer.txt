@@ -6,28 +6,28 @@ Building model
 E:\Ñ§Ï°\Python\Python2.7\lib\site-packages\theano-0.7.0-py2.7.egg\theano\scan_module\scan_perform_ext.py:133: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility
   from scan_perform.scan_perform import *
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpebfmj7/9b19f8e9f1c4dc3a749baa18448473af.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpebfmj7/9b19f8e9f1c4dc3a749baa18448473af.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpebfmj7/9b19f8e9f1c4dc3a749baa18448473af.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpebfmj7/9b19f8e9f1c4dc3a749baa18448473af.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9os_c4/3f958efd3f132402d77e9eee18b9cceb.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9os_c4/3f958efd3f132402d77e9eee18b9cceb.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9os_c4/3f958efd3f132402d77e9eee18b9cceb.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9os_c4/3f958efd3f132402d77e9eee18b9cceb.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp7nftfb/a7014ccdeb99079a05fe5f45d4b13e27.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp7nftfb/a7014ccdeb99079a05fe5f45d4b13e27.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp7nftfb/a7014ccdeb99079a05fe5f45d4b13e27.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp7nftfb/a7014ccdeb99079a05fe5f45d4b13e27.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpm9sxy6/55b4967141085d90055025ec6fe21756.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpm9sxy6/55b4967141085d90055025ec6fe21756.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpm9sxy6/55b4967141085d90055025ec6fe21756.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpm9sxy6/55b4967141085d90055025ec6fe21756.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp0bmtf7/3feba355cf01f66ef4f4544821ca3e11.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp0bmtf7/3feba355cf01f66ef4f4544821ca3e11.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp0bmtf7/3feba355cf01f66ef4f4544821ca3e11.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp0bmtf7/3feba355cf01f66ef4f4544821ca3e11.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpvmxswr/f5965b1c12b3482b04a6c28b0109583c.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpvmxswr/f5965b1c12b3482b04a6c28b0109583c.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpvmxswr/f5965b1c12b3482b04a6c28b0109583c.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpvmxswr/f5965b1c12b3482b04a6c28b0109583c.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9ovdmu/d261799949acd84695f0b06dd6ef4b2d.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9ovdmu/d261799949acd84695f0b06dd6ef4b2d.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9ovdmu/d261799949acd84695f0b06dd6ef4b2d.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmp9ovdmu/d261799949acd84695f0b06dd6ef4b2d.exp
 
 DEBUG: nvcc STDOUT mod.cu
-   ÕýÔÚ´´½¨¿â C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpksrs9l/4ebf662301c6a17ea639b08668fdb427.lib ºÍ¶ÔÏó C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpksrs9l/4ebf662301c6a17ea639b08668fdb427.exp
+   ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpksrs9l/4ebf662301c6a17ea639b08668fdb427.lib ï¿½Í¶ï¿½ï¿½ï¿½ C:/Users/lenovo/AppData/Local/Theano/compiledir_Windows-8-6.2.9200-Intel64_Family_6_Model_60_Stepping_3_GenuineIntel-2.7.6-64/tmpksrs9l/4ebf662301c6a17ea639b08668fdb427.exp
 
 Optimization
 1998 train examples
