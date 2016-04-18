@@ -163,7 +163,7 @@ class LSTM_Attention_simple(MergeLayer):
                  mask_input=None,
                  #precompute_input=True,
                  **kwargs):
-
+        '''观察了下，整个init部分就是把这些参数传到init里面，而且能初始化的就给初始化了，完成了这个事情'''
         # Initialize parent layer
         # This layer inherits from a MergeLayer, because it can have two
         # inputs - the layer input, and the mask.  We will just provide the
@@ -303,7 +303,7 @@ class LSTM_Attention_simple(MergeLayer):
 
         # Setup initial values for the cell and the hidden units
         if isinstance(cell_init, T.TensorVariable):
-            if cell_init.ndim != 2:
+            if cell_init.ndim != 2:#是1*d的，所以确实是二维
                 raise ValueError(
                     "When cell_init is provided as a TensorVariable, it should"
                     " have 2 dimensions and have shape (num_batch, num_units)")
@@ -311,7 +311,7 @@ class LSTM_Attention_simple(MergeLayer):
         else:
             self.cell_init = self.add_param(
                 cell_init, (1, num_units), name="cell_init",
-                trainable=learn_init, regularizable=False)
+                trainable=learn_init, regularizable=False)#还有这个trainable这个参数干嘛的,可以关注一下
 
         if isinstance(hid_init, T.TensorVariable):
             if hid_init.ndim != 2:
@@ -326,7 +326,7 @@ class LSTM_Attention_simple(MergeLayer):
 
     def get_output_shape_for(self, input_shapes):
         input_shape = input_shapes[0]
-        return input_shape[0], None, self.num_units
+        return input_shape[0], None, self.num_units  #这个None 有点奇怪，？？？
 
     def get_output_for(self, inputs, **kwargs):
         """
