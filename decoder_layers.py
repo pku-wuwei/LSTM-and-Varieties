@@ -376,7 +376,7 @@ class LSTM_Attention_simple(MergeLayer):
 
             # Calculate gates pre-activations and slice
             gates = T.dot(hid_previous, W_hid_stacked) + b_stacked
-
+            #hid_previous是batch_num*d的大小,w_stacked是d*4d，弄完了是batch_num*4d的大小
             # Clip gradients
             if self.grad_clipping is not False:
                 gates = theano.gradient.grad_clip(
@@ -402,7 +402,7 @@ class LSTM_Attention_simple(MergeLayer):
             # Compute new cell value
             cell = forgetgate*cell_previous + ingate*cell_input
 
-            if self.peepholes:
+            if self.peepholes:#注意这个outgate是有个计算顺序的，在完成了cell状态更新之后，才能再算
                 outgate += cell*W_cell_to_outgate
 
             # W_align:  (num_units, aln_num_units)
@@ -446,6 +446,7 @@ class LSTM_Attention_simple(MergeLayer):
         sequences = []
         step_fun = step
 
+        #这里是把几个门的初始状态，扩充为　batch*d　的维度上
         ones = T.ones((num_batch, 1))
         if isinstance(self.cell_init, T.TensorVariable):
             cell_init = self.cell_init
@@ -465,6 +466,7 @@ class LSTM_Attention_simple(MergeLayer):
         # The hidden-to-hidden weight matrix is always used in step
 
         hUa = T.dot(input, self.U_align)   # (num_batch, seq_len, num_units_aln)
+        #这里的U_align好像是encoder空间到decoder空间的转换，可以改变维度大小
 
         non_seqs = [hUa, self.W_align, self.v_align,
                     self.W_hid_stacked]
@@ -499,7 +501,7 @@ class LSTM_Attention_simple(MergeLayer):
                 sequences=sequences,
                 outputs_info=[cell_init, hid_init, alpha_init],
                 go_backwards=self.backwards,
-                truncate_gradient=self.gradient_steps,
+                truncate_gradient=self.gradient_steps, #配合前面，还是不知道这个参数干嘛的？？？
                 non_sequences=non_seqs,
                 n_steps=self.n_decodesteps,
                 strict=True)[0]
@@ -512,8 +514,8 @@ class LSTM_Attention_simple(MergeLayer):
 
         # mask:  (BS, encode_seqlen
         # a_out; (n_decodesteps, BS, encode_seqlen)
-        cell_out = cell_out.dimshuffle(1, 0, 2)
-        mask = mask.dimshuffle(0, 'x', 1)
+        cell_out = cell_out.dimshuffle(1, 0, 2)#原来cell_out经过scan之后应该是decoder_step*batch_num*d这么大
+        mask = mask.dimshuffle(0, 'x', 1)#mask传播为BS*未知数*encoder_len这么大
         a_out = a_out.dimshuffle(1, 0, 2)  # (BS, n_decodesteps, encode_seqlen)
 
         # set masked positions to large negative value
