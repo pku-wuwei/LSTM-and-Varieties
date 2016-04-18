@@ -230,6 +230,7 @@ class LSTM_Attention_simple(MergeLayer):
 
         self.b_ingate = self.add_param(
             b_ingate, (num_units,), name="b_ingate", regularizable=False)
+        #注意上面这个b之类有个参数是regularizable，可以之后研究一下什么梗？？？
 
         #self.W_in_to_forgetgate = self.add_param(
         #    W_in_to_forgetgate, (num_inputs, num_units),
@@ -267,7 +268,7 @@ class LSTM_Attention_simple(MergeLayer):
         #    [self.W_in_to_ingate, self.W_in_to_forgetgate,
         #     self.W_in_to_cell, self.W_in_to_outgate], axis=1)
 
-        # Same for hidden weight matrices
+        # Same for hidden weight matrices  这几个参数都是d*d维度的，变成d*4d的
         self.W_hid_stacked = T.concatenate(
             [self.W_hid_to_ingate, self.W_hid_to_forgetgate,
              self.W_hid_to_cell, self.W_hid_to_outgate], axis=1)
@@ -281,6 +282,7 @@ class LSTM_Attention_simple(MergeLayer):
         # peephole connections.  These are elementwise products with the cell
         # state, so they are represented as vectors.
         if self.peepholes:
+            #这几个参数，怎么好像都是中间有个逗号的是什么梗，好像都是d*1的唉？？？
             self.W_cell_to_ingate = self.add_param(
                 W_cell_to_ingate, (num_units, ), name="W_cell_to_ingate")
 
