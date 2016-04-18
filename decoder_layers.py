@@ -523,10 +523,11 @@ class LSTM_Attention_simple(MergeLayer):
 
         # normalize over encode_seqlen (->large negative values = 0)
         a_out = T.reshape(a_out, (num_batch*self.n_decodesteps, encode_seqlen))
-        alpha = T.nnet.softmax(a_out)
+        alpha = T.nnet.softmax(a_out)#针对每一行分别做softmax
         alpha = T.reshape(alpha, (num_batch, self.n_decodesteps, encode_seqlen))
 
-        # (BS, encode_seqlen, num_units) -> (BS, num_units, 1 encode_seqlen,)
+        '''这段这个各种dimshuffle传播的地方有点厉害，这个技巧是必须掌握一下'''
+        # (BS, encode_seqlen, num_units) -> (BS, num_units, 1 ,encode_seqlen)
         input = input.dimshuffle(0, 2, 'x',  1)
         # (BS, n_decodesteps, encode_seqlen) -> (BS, '1', n_decodesteps, encode_seqlen)
         alpha = alpha.dimshuffle(0, 'x', 1, 2)
