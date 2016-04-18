@@ -157,7 +157,7 @@ class LSTM_Attention_simple(MergeLayer):
                  backwards=False,
                  learn_init=False,
                  peepholes=True,
-                 gradient_steps=-1,
+                 gradient_steps=-1,#这个是干嘛的？？？ 之后可以关注一下
                  grad_clipping=False,
                  unroll_scan=False,
                  mask_input=None,
@@ -168,13 +168,14 @@ class LSTM_Attention_simple(MergeLayer):
         # This layer inherits from a MergeLayer, because it can have two
         # inputs - the layer input, and the mask.  We will just provide the
         # layer input as incomings, unless a mask input was provided.
-        # incomings = [incoming]#TODO　我觉得这个[]加得有点莫名其妙，而且好像会出问题的呀。
+        # incomings = [incoming] #我觉得这个[]加得有点莫名其妙，而且好像会出问题的呀。
         incomings=incoming
         if mask_input is not None:
             incomings.append(mask_input)
         super(LSTM_Attention_simple, self).__init__(incomings, **kwargs)
 
         # For any of the nonlinearities, if None is supplied, use identity
+        #　indentity　是 linear　线性的
         if nonlinearity_ingate is None:
             self.nonlinearity_ingate = nonlinearities.identity
         else:
@@ -213,11 +214,12 @@ class LSTM_Attention_simple(MergeLayer):
 
         # Retrieve the dimensionality of the incoming layer
         input_shape = self.input_shapes[0]
+        #这个是在super继承的是会弄出来的,这里应该就是输入的shape，应该是一个 batch*encoder_len*d的东西
         if unroll_scan and input_shape[1] is None:
             raise ValueError("Input sequence length cannot be specified as "
                              "None when unroll_scan is True")
 
-        num_inputs = np.prod(self.input_shape[2:])
+        num_inputs = np.prod(self.input_shape[2:])#这个是个什么梗？？ 连乘结果干嘛用的
 
         # Initialize parameters using the supplied args
         #self.W_in_to_ingate = self.add_param(
