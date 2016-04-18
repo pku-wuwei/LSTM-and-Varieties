@@ -168,7 +168,7 @@ class LSTM_Attention_simple(MergeLayer):
         # This layer inherits from a MergeLayer, because it can have two
         # inputs - the layer input, and the mask.  We will just provide the
         # layer input as incomings, unless a mask input was provided.
-        incomings = [incoming]
+        incomings = [incoming]#？？？　我觉得这个[]加得有点莫名其妙，而且好像会出问题的呀。
         if mask_input is not None:
             incomings.append(mask_input)
         super(LSTM_Attention_simple, self).__init__(incomings, **kwargs)
